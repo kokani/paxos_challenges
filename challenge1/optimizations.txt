@@ -1,0 +1,8 @@
+
+
+As we get more users, it would be more performant to do couple of things,
+
+1. Instead of caching in local variable, run a caching service like ElasticSearch.
+2. Add a Load Balancer which receives the user requests and directs them to one of the worker machines which process the request.
+
+	

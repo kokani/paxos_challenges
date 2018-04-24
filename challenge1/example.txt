@@ -1,0 +1,17 @@
+local:~$ curl -s -X POST -H "Content-Type: application/json" -d '{"message": "foo"}' 45.33.71.183 | jq .
+{
+  "digest": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae"
+}
+
+local:~$ curl -s 45.33.71.183/messages/2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae | jq .
+{
+  "message": "foo"
+}
+
+local:~$ curl -i 45.33.71.183/messages/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+HTTP/1.0 404 Not Found
+Server: BaseHTTP/0.3 Python/2.7.12
+Date: Mon, 16 Apr 2018 00:57:43 GMT
+Content-type: application/json
+
+{"err_msg": "Message not found"}

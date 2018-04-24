@@ -1,0 +1,10 @@
+A, 300
+Candy Bar, 500 
+Paperback Book, 700 
+Detergent, 1000 
+B, 1200
+Headphones, 1400 
+Earmuffs, 2000 
+C, 2500
+Bluetooth Stereo, 6000 
+D, 7000
